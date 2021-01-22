@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: #8d2441;
+}
+
+a::after {
+    content: "";
+    background: #8d2441;
+    display: inline-block;
+    top: 10px;
+    left: -7rem;
+    width: 0rem;
+    height: .2rem;
+    position: relative;
+    opacity: 0;
+}
+
+a:hover::after {
+    width: 7rem;
+    opacity: 1;
+    transition: all .75s ease-out;
+}

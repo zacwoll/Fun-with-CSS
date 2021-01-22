@@ -1,0 +1,46 @@
+.i-html {
+    background: url('0-sprite.png') 10px 0;
+}
+
+.i-css {
+    background: url('0-sprite.png') -278px 0;
+}
+
+.i-js {
+    background: url('0-sprite.png') -568px 0;
+}
+
+.icon {
+    display: flex;
+    width: 268px;
+    height: 375px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+}
+
+li {
+    width: 300px;
+    text-align: center;
+    border: 2px solid rgba(150, 150, 150, 20);
+    border-radius: 10px;
+    background-color: rgba(247, 247, 247, 95);
+    padding-bottom: 50px;
+    padding-top: 20px;
+    margin: 0px 20px 0px 20px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+li:first-child {
+    margin-left: none;
+}
+
+li:last-child {
+    margin-right:none
+}

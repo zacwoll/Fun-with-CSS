@@ -1,0 +1,112 @@
+/* supresses normal checkbox behavior */
+.menu-open {
+    display: none;
+    opacity: 0;
+}
+
+/* removes blue underline on the anchor tags */
+a {
+    text-decoration: none;
+}
+
+/* w3schools hamburger */
+.menu-open-button {
+    background: white;
+    display: block;
+    width: 2rem;
+    height: .2rem;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+/* red rounded icons */
+.menu-open-button, .fa {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(75, 75, 75);
+    border-radius: 50%;
+    background-color: rgb(207, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* white lines */
+.menu-line {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: block;
+    width: 40%;
+    height: 2px;
+    background-color: white;
+}
+
+.menu-line::before,
+.menu-line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background: white; */
+    transition: all .2s ease-out;
+}
+
+/* icons turn white with inner red on hover */
+.menu-item:hover .fa {
+    background-color: white;
+    color: rgb(207, 0, 0);
+}
+
+/* icons other than hamburger */
+.fa {
+    top: 8px; /* positions icons under hamburger */
+    position: absolute;
+    color: white;
+    z-index: -1; /* moves them to back */
+    transition: transform .5s ease;
+}
+
+/* turns hamburger to 'X' */
+.menu-open:checked + .menu-open-button .menu-line-2 {
+    opacity: 0;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Makes button bigger on hover */
+.menu-open:not(:checked) + .menu-open-button:hover {
+    transform: scale(1.3);
+}
+
+/* moves icons down below hamburger */
+.menu-open:checked ~ .menu-item {
+    transition: transfrom 4s ease;
+}
+
+.menu-open:checked ~ .menu-item .fa-area-chart {
+    transform: translateY(3rem);
+}
+
+.menu-open:checked ~ .menu-item .fa-bar-chart {
+    transform: translateY(6rem);
+}
+
+.menu-open:checked ~ .menu-item .fa-line-chart {
+    transform: translateY(9rem);
+}
+
+.menu-open:checked ~ .menu-item .fa-pie-chart {
+    transform: translateY(12rem);
+}
+
+.menu-open:checked ~ .menu-item .fa-table {
+    transform: translateY(15rem);
+}
